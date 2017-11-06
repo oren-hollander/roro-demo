@@ -2,9 +2,28 @@
   "name": "roro-demo",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {},
-  "scripts": {},
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "react": "^16.0.0",
+    "roro.js": "^1.0.11"
+  },
+  "scripts": {
+    "lint:js": "eslint app/ webpack.*.js --cache",
+    "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --env development\"",
+    "build": "webpack --env production"
+  },
   "devDependencies": {
-    "webpack": "^3.8.1"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "eslint": "^4.10.0",
+    "eslint-loader": "^1.9.0",
+    "html-webpack-plugin": "^2.30.1",
+    "nodemon": "^1.12.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1",
+    "worker-loader": "^1.1.0"
   }
 }
